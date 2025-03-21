@@ -84,8 +84,13 @@ EOF
 libvpx6
 EOF
 	    ;;
+	  "scalingo-22")
+	    cat << EOF >>$build_tmpdir/Aptfile
+libvpx7
+EOF
+	    ;;
 	  *)
-	    error "STACK must be 'scalingo-18' or 'scalingo-20'"
+	    error "STACK must be 'scalingo-18', 'scalingo-20' or 'scalingo-22'"
 	esac
 
 	local cache_tmpdir=$(mktemp -d)
